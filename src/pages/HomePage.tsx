@@ -6,26 +6,32 @@ import { EducationSection } from "../features/education/EducationSection";
 import { ExperienceSection } from "../features/experience/ExperienceSection";
 import { ProjectsSection } from "../features/projects/ProjectsSection";
 import { SkillsSection } from "../features/skills/SkillsSection";
-import type { Language, PortfolioContent } from "../types/portfolio";
+import type { Language, PortfolioContent, Theme } from "../types/portfolio";
 
 type HomePageProps = {
   content: PortfolioContent;
   language: Language;
   onLanguageChange: (language: Language) => void;
+  onThemeChange: (theme: Theme) => void;
+  theme: Theme;
 };
 
 export function HomePage({
   content,
   language,
   onLanguageChange,
+  onThemeChange,
+  theme,
 }: HomePageProps) {
   return (
-    <>
+    <div className="app-shell" data-theme={theme}>
       <SiteHeader
         language={language}
         navigationItems={content.navigation}
         onLanguageChange={onLanguageChange}
+        onThemeChange={onThemeChange}
         profile={content.profile}
+        theme={theme}
       />
       <main>
         <AboutSection
@@ -46,6 +52,6 @@ export function HomePage({
         />
       </main>
       <SiteFooter profile={content.profile} />
-    </>
+    </div>
   );
 }

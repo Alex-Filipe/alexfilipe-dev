@@ -1,10 +1,12 @@
-import type { Language, NavigationItem, Profile } from "../../types/portfolio";
+import type { Language, NavigationItem, Profile, Theme } from "../../types/portfolio";
 
 type SiteHeaderProps = {
   language: Language;
   navigationItems: NavigationItem[];
   onLanguageChange: (language: Language) => void;
+  onThemeChange: (theme: Theme) => void;
   profile: Profile;
+  theme: Theme;
 };
 
 const languageOptions: Array<{ label: string; language: Language; flag: string }> = [
@@ -12,11 +14,18 @@ const languageOptions: Array<{ label: string; language: Language; flag: string }
   { label: "English", language: "en-US", flag: "🇺🇸" },
 ];
 
+const themeOptions: Array<{ icon: string; label: string; theme: Theme }> = [
+  { icon: "☾", label: "Tema escuro", theme: "dark" },
+  { icon: "☼", label: "Tema claro", theme: "light" },
+];
+
 export function SiteHeader({
   language,
   navigationItems,
   onLanguageChange,
+  onThemeChange,
   profile,
+  theme,
 }: SiteHeaderProps) {
   return (
     <header className="site-header">
@@ -44,6 +53,21 @@ export function SiteHeader({
               type="button"
             >
               <span aria-hidden="true">{option.flag}</span>
+            </button>
+          ))}
+        </div>
+
+        <div className="theme-switcher" aria-label="Selecionar tema">
+          {themeOptions.map((option) => (
+            <button
+              aria-label={option.label}
+              aria-pressed={theme === option.theme}
+              className={theme === option.theme ? "is-active" : ""}
+              key={option.theme}
+              onClick={() => onThemeChange(option.theme)}
+              type="button"
+            >
+              {option.icon}
             </button>
           ))}
         </div>

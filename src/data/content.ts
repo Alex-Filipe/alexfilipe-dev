@@ -82,7 +82,7 @@ export const portfolioContent: Record<string, PortfolioContent> = {
         period: "out de 2024 - o momento",
         location: "Belo Horizonte, MG · Remoto",
         description:
-          "Atuo no desenvolvimento e evolução de sistemas empresariais, com foco em backend, APIs, integrações e serviços escaláveis usando C# e .NET.",
+          "Atuo no desenvolvimento e evolução de sistemas empresariais, com foco em backend, APIs, integrações e serviços escaláveis usando C# e .NET. No dia a dia, contribuo para soluções que conectam dados, processos e diferentes sistemas corporativos, mantendo atenção à qualidade do código, manutenção e performance.",
         highlights: [
           "Desenvolvimento de APIs e serviços em C#/.NET.",
           "Integrações entre sistemas corporativos, filas e Service Bus.",
@@ -95,7 +95,7 @@ export const portfolioContent: Record<string, PortfolioContent> = {
         period: "jul de 2024 - set de 2024",
         location: "Caxias do Sul, RS · Remoto",
         description:
-          "Experiência em desenvolvimento de software em ambiente remoto, contribuindo para sistemas corporativos e sustentação de soluções.",
+          "Experiência em desenvolvimento de software em ambiente remoto, contribuindo para sistemas corporativos e sustentação de soluções. A atuação reforçou minha prática em colaboração técnica, análise de demandas e evolução incremental de sistemas em um contexto profissional distribuído.",
         highlights: [
           "Participação em rotinas de desenvolvimento e manutenção de software.",
           "Colaboração com equipe técnica em demandas de sistemas empresariais.",
@@ -108,7 +108,7 @@ export const portfolioContent: Record<string, PortfolioContent> = {
         period: "out de 2023 - abr de 2024",
         location: "Belo Horizonte, MG · Remoto",
         description:
-          "Atuei no desenvolvimento de APIs, interfaces e integrações, contribuindo para a melhoria de sistemas internos e fluxos de processo.",
+          "Atuei no desenvolvimento de APIs, interfaces e integrações, contribuindo para a melhoria de sistemas internos e fluxos de processo. Também participei de manutenções em sistemas PHP/Laravel, implementação de telas com React, integrações com plataformas externas e apoio em ambientes de produção.",
         highlights: [
           "Desenvolvimento de APIs e serviços em C#/.NET.",
           "Implementação de front-end com React e manutenção de sistemas PHP/Laravel.",
@@ -234,7 +234,7 @@ export const portfolioContent: Record<string, PortfolioContent> = {
         period: "Oct 2024 - Present",
         location: "Belo Horizonte, MG · Remote",
         description:
-          "I work on the development and evolution of enterprise systems, focusing on backend engineering, APIs, integrations, and scalable services with C# and .NET.",
+          "I work on the development and evolution of enterprise systems, focusing on backend engineering, APIs, integrations, and scalable services with C# and .NET. My daily work connects data, processes, and different corporate systems while keeping attention on code quality, maintainability, and performance.",
         highlights: [
           "Development of APIs and services with C#/.NET.",
           "Integrations between enterprise systems, queues, and Service Bus.",
@@ -247,7 +247,7 @@ export const portfolioContent: Record<string, PortfolioContent> = {
         period: "Jul 2024 - Sep 2024",
         location: "Caxias do Sul, RS · Remote",
         description:
-          "Software development experience in a remote environment, contributing to enterprise systems and solution maintenance.",
+          "Software development experience in a remote environment, contributing to enterprise systems and solution maintenance. This role strengthened my practice in technical collaboration, demand analysis, and incremental system evolution in a distributed professional context.",
         highlights: [
           "Participation in software development and maintenance routines.",
           "Collaboration with technical teams on enterprise system demands.",
@@ -260,7 +260,7 @@ export const portfolioContent: Record<string, PortfolioContent> = {
         period: "Oct 2023 - Apr 2024",
         location: "Belo Horizonte, MG · Remote",
         description:
-          "I worked on APIs, interfaces, and integrations, contributing to internal systems and process improvements.",
+          "I worked on APIs, interfaces, and integrations, contributing to internal systems and process improvements. I also supported PHP/Laravel systems, implemented React interfaces, worked with external platform integrations, and helped with production environment demands.",
         highlights: [
           "Development of APIs and services with C#/.NET.",
           "Front-end implementation with React and maintenance of PHP/Laravel systems.",

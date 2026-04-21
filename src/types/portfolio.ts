@@ -33,6 +33,8 @@ export type Education = {
 
 export type Language = "pt-BR" | "en-US";
 
+export type Theme = "dark" | "light";
+
 export type SectionCopy = {
   eyebrow: string;
   title: string;
