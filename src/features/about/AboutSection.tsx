@@ -1,11 +1,16 @@
-import type { Profile, SocialLink } from "../../types/portfolio";
+import type { HeroMetric, Profile, SocialLink } from "../../types/portfolio";
 
 type AboutSectionProps = {
+  heroMetrics: HeroMetric[];
   profile: Profile;
   socialLinks: SocialLink[];
 };
 
-export function AboutSection({ profile, socialLinks }: AboutSectionProps) {
+export function AboutSection({
+  heroMetrics,
+  profile,
+  socialLinks,
+}: AboutSectionProps) {
   return (
     <section className="hero-section" id="about">
       <div className="hero-content">
@@ -23,6 +28,31 @@ export function AboutSection({ profile, socialLinks }: AboutSectionProps) {
           ))}
         </div>
       </div>
+
+      <aside className="hero-panel" aria-label="Professional profile highlights">
+        <div className="terminal-bar">
+          <span />
+          <span />
+          <span />
+        </div>
+        <div className="terminal-body">
+          <p className="terminal-command">alex.profile --stack</p>
+          <div className="terminal-grid">
+            {heroMetrics.map((metric) => (
+              <div key={metric.label}>
+                <span>{metric.label}</span>
+                <strong>{metric.value}</strong>
+              </div>
+            ))}
+          </div>
+          <pre>{`const engineer = {
+  backend: "C# / .NET",
+  databases: ["PostgreSQL", "SQL Server"],
+  integrations: true,
+  research: "AI"
+};`}</pre>
+        </div>
+      </aside>
     </section>
   );
 }

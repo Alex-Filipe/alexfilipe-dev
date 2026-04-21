@@ -29,6 +29,7 @@ export function HomePage({
       />
       <main>
         <AboutSection
+          heroMetrics={content.heroMetrics}
           profile={content.profile}
           socialLinks={content.socialLinks}
         />
