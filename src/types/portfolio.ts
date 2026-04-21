@@ -29,6 +29,7 @@ export type Education = {
   institution: string;
   status: string;
   description: string;
+  highlights: string[];
 };
 
 export type Language = "pt-BR" | "en-US";

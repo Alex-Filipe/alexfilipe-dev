@@ -1,4 +1,5 @@
 import { SectionHeading } from "../../components/ui/SectionHeading";
+import { TimelineCard } from "../../components/ui/TimelineCard";
 import type { Experience, SectionCopy } from "../../types/portfolio";
 
 type ExperienceSectionProps = {
@@ -17,20 +18,13 @@ export function ExperienceSection({ copy, experiences }: ExperienceSectionProps)
 
       <div className="timeline">
         {experiences.map((experience) => (
-          <article className="timeline-item" key={experience.company}>
-            <div>
-              <p>{experience.period}</p>
-              <h3>{experience.role}</h3>
-              <span>{experience.company}</span>
-              <span>{experience.location}</span>
-            </div>
-            <p>{experience.description}</p>
-            <ul>
-              {experience.highlights.map((highlight) => (
-                <li key={highlight}>{highlight}</li>
-              ))}
-            </ul>
-          </article>
+          <TimelineCard
+            description={experience.description}
+            highlights={experience.highlights}
+            key={`${experience.company}-${experience.period}`}
+            meta={[experience.period, experience.company, experience.location]}
+            title={experience.role}
+          />
         ))}
       </div>
     </section>

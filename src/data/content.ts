@@ -158,6 +158,11 @@ export const portfolioContent: Record<string, PortfolioContent> = {
         status: "Em andamento",
         description:
           "Pesquisa com foco em Inteligência Artificial, explorando como técnicas de IA podem ser aplicadas na construção de sistemas inteligentes e soluções tecnológicas inovadoras.",
+        highlights: [
+          "Pesquisa em Inteligência Artificial aplicada.",
+          "Estudo de sistemas inteligentes e soluções tecnológicas.",
+          "Conexão entre engenharia de software e investigação acadêmica.",
+        ],
       },
       {
         title: "Graduação em Engenharia de Software",
@@ -165,6 +170,11 @@ export const portfolioContent: Record<string, PortfolioContent> = {
         status: "Concluído",
         description:
           "Formação voltada para desenvolvimento de software, arquitetura de sistemas, qualidade de código, bancos de dados e práticas de engenharia aplicadas à construção de soluções digitais.",
+        highlights: [
+          "Desenvolvimento de software e arquitetura de sistemas.",
+          "Qualidade de código, bancos de dados e práticas de engenharia.",
+          "Base acadêmica para construção de soluções digitais.",
+        ],
       },
     ],
   },
@@ -310,6 +320,11 @@ export const portfolioContent: Record<string, PortfolioContent> = {
         status: "In progress",
         description:
           "Research focused on Artificial Intelligence, exploring how AI techniques can be applied to build intelligent systems and innovative technology solutions.",
+        highlights: [
+          "Research in applied Artificial Intelligence.",
+          "Study of intelligent systems and technology solutions.",
+          "Connection between software engineering and academic research.",
+        ],
       },
       {
         title: "Bachelor's Degree in Software Engineering",
@@ -317,6 +332,11 @@ export const portfolioContent: Record<string, PortfolioContent> = {
         status: "Completed",
         description:
           "Education focused on software development, systems architecture, code quality, databases, and engineering practices applied to digital solutions.",
+        highlights: [
+          "Software development and systems architecture.",
+          "Code quality, databases, and engineering practices.",
+          "Academic foundation for building digital solutions.",
+        ],
       },
     ],
   },

@@ -1,4 +1,5 @@
 import { SectionHeading } from "../../components/ui/SectionHeading";
+import { TimelineCard } from "../../components/ui/TimelineCard";
 import type { Education, SectionCopy } from "../../types/portfolio";
 
 type EducationSectionProps = {
@@ -17,14 +18,13 @@ export function EducationSection({ copy, education }: EducationSectionProps) {
 
       <div className="timeline">
         {education.map((item) => (
-          <article className="timeline-item" key={item.title}>
-            <div>
-              <p>{item.status}</p>
-              <h3>{item.title}</h3>
-              <span>{item.institution}</span>
-            </div>
-            <p>{item.description}</p>
-          </article>
+          <TimelineCard
+            description={item.description}
+            highlights={item.highlights}
+            key={item.title}
+            meta={[item.status, item.institution]}
+            title={item.title}
+          />
         ))}
       </div>
     </section>
