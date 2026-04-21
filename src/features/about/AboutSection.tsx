@@ -9,6 +9,7 @@ export function AboutSection() {
         <h1>{profile.name}</h1>
         <p className="hero-headline">{profile.headline}</p>
         <p className="hero-summary">{profile.summary}</p>
+        <p className="hero-summary">{profile.shortIntro}</p>
 
         <div className="hero-actions" aria-label="Links de contato">
           {socialLinks.map((link) => (

@@ -6,8 +6,8 @@ export function ContactSection() {
     <section className="page-section contact-section" id="contact">
       <SectionHeading
         eyebrow="Contato"
-        title="Vamos conversar"
-        description="Links iniciais para facilitar conexoes profissionais, oportunidades e conversas sobre projetos."
+        title="Vamos conversar sobre tecnologia, produto e carreira"
+        description="Estou aberto a conexões profissionais, oportunidades e conversas sobre desenvolvimento de software, backend, integrações e aplicações de IA."
       />
 
       <div className="contact-links">

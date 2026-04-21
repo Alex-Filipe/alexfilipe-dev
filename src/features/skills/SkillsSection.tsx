@@ -5,9 +5,9 @@ export function SkillsSection() {
   return (
     <section className="page-section" id="skills">
       <SectionHeading
-        eyebrow="Skills"
-        title="Tecnologias e praticas"
-        description="Uma visao objetiva das ferramentas e bases que sustentam meu trabalho."
+        eyebrow="Tech stack"
+        title="Tecnologias que uso para construir e integrar sistemas"
+        description="Uma visão organizada das linguagens, frameworks, bancos, ferramentas e práticas citadas no meu perfil profissional."
       />
 
       <div className="skills-grid">

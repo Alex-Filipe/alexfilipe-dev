@@ -7,8 +7,8 @@ export function ProjectsSection() {
     <section className="page-section section-contrast" id="projects">
       <SectionHeading
         eyebrow="Projetos"
-        title="Trabalhos que contam minha evolucao"
-        description="Cards preparados para receber projetos reais, repositorios e deploys."
+        title="Espaço preparado para cases reais"
+        description="A seção de projetos está pronta para receber estudos de caso, repositórios e entregas publicáveis sem criar informações fictícias."
       />
 
       <div className="project-grid">

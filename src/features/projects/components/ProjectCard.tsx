@@ -16,13 +16,15 @@ export function ProjectCard({ project }: ProjectCardProps) {
         ))}
       </div>
 
-      <div className="project-links">
-        {project.links.map((link) => (
-          <a key={link.label} href={link.href}>
-            {link.label}
-          </a>
-        ))}
-      </div>
+      {project.links?.length ? (
+        <div className="project-links">
+          {project.links.map((link) => (
+            <a key={link.label} href={link.href}>
+              {link.label}
+            </a>
+          ))}
+        </div>
+      ) : null}
     </article>
   );
 }

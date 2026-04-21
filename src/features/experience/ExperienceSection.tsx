@@ -5,9 +5,9 @@ export function ExperienceSection() {
   return (
     <section className="page-section" id="experience">
       <SectionHeading
-        eyebrow="Experiencia"
-        title="Onde minha pratica vira produto"
-        description="Uma base inicial para registrar empresas, desafios, entregas e impacto."
+        eyebrow="Experiência"
+        title="Sistemas, APIs e integrações em produção"
+        description="Experiência em desenvolvimento backend, evolução de sistemas corporativos, integrações e sustentação de soluções empresariais."
       />
 
       <div className="timeline">
@@ -17,6 +17,7 @@ export function ExperienceSection() {
               <p>{experience.period}</p>
               <h3>{experience.role}</h3>
               <span>{experience.company}</span>
+              <span>{experience.location}</span>
             </div>
             <p>{experience.description}</p>
             <ul>

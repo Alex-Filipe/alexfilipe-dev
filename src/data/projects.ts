@@ -2,15 +2,9 @@ import type { Project } from "../types/portfolio";
 
 export const projects: Project[] = [
   {
-    title: "Portfolio pessoal",
+    title: "Projetos profissionais em organização",
     description:
-      "Projeto criado para apresentar minha trajetoria, experiencias, habilidades e trabalhos como desenvolvedor.",
-    stack: ["React", "TypeScript", "Vite"],
-    links: [
-      {
-        label: "Repositorio",
-        href: "https://github.com/",
-      },
-    ],
+      "Meu LinkedIn ainda não lista projetos públicos específicos. Esta área está preparada para receber estudos de caso, repositórios e entregas selecionadas conforme forem organizados para publicação.",
+    stack: ["C#", ".NET", "React", "APIs", "Integrações"],
   },
 ];
