@@ -1,13 +1,18 @@
 import { SectionHeading } from "../../components/ui/SectionHeading";
-import { socialLinks } from "../../data/socialLinks";
+import type { SectionCopy, SocialLink } from "../../types/portfolio";
 
-export function ContactSection() {
+type ContactSectionProps = {
+  copy: SectionCopy;
+  socialLinks: SocialLink[];
+};
+
+export function ContactSection({ copy, socialLinks }: ContactSectionProps) {
   return (
     <section className="page-section contact-section" id="contact">
       <SectionHeading
-        eyebrow="Contato"
-        title="Vamos conversar sobre tecnologia, produto e carreira"
-        description="Estou aberto a conexões profissionais, oportunidades e conversas sobre desenvolvimento de software, backend, integrações e aplicações de IA."
+        eyebrow={copy.eyebrow}
+        title={copy.title}
+        description={copy.description}
       />
 
       <div className="contact-links">

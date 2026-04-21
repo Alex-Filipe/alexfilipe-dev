@@ -1,7 +1,11 @@
-import { socialLinks } from "../../data/socialLinks";
-import { profile } from "../../data/profile";
+import type { Profile, SocialLink } from "../../types/portfolio";
 
-export function AboutSection() {
+type AboutSectionProps = {
+  profile: Profile;
+  socialLinks: SocialLink[];
+};
+
+export function AboutSection({ profile, socialLinks }: AboutSectionProps) {
   return (
     <section className="hero-section" id="about">
       <div className="hero-content">

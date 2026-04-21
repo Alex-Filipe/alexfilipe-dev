@@ -1,13 +1,18 @@
 import { SectionHeading } from "../../components/ui/SectionHeading";
-import { experiences } from "../../data/experience";
+import type { Experience, SectionCopy } from "../../types/portfolio";
 
-export function ExperienceSection() {
+type ExperienceSectionProps = {
+  copy: SectionCopy;
+  experiences: Experience[];
+};
+
+export function ExperienceSection({ copy, experiences }: ExperienceSectionProps) {
   return (
     <section className="page-section" id="experience">
       <SectionHeading
-        eyebrow="Experiência"
-        title="Sistemas, APIs e integrações em produção"
-        description="Experiência em desenvolvimento backend, evolução de sistemas corporativos, integrações e sustentação de soluções empresariais."
+        eyebrow={copy.eyebrow}
+        title={copy.title}
+        description={copy.description}
       />
 
       <div className="timeline">

@@ -1,6 +1,10 @@
-import { profile } from "../../data/profile";
+import type { Profile } from "../../types/portfolio";
 
-export function SiteFooter() {
+type SiteFooterProps = {
+  profile: Profile;
+};
+
+export function SiteFooter({ profile }: SiteFooterProps) {
   return (
     <footer className="site-footer">
       <p>{profile.name}</p>

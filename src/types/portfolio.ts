@@ -30,3 +30,43 @@ export type Education = {
   status: string;
   description: string;
 };
+
+export type Language = "pt-BR" | "en-US";
+
+export type SectionCopy = {
+  eyebrow: string;
+  title: string;
+  description: string;
+};
+
+export type NavigationItem = {
+  label: string;
+  href: string;
+};
+
+export type Profile = {
+  name: string;
+  role: string;
+  location: string;
+  headline: string;
+  summary: string;
+  shortIntro: string;
+};
+
+export type PortfolioContent = {
+  language: Language;
+  navigation: NavigationItem[];
+  profile: Profile;
+  socialLinks: SocialLink[];
+  sections: {
+    experience: SectionCopy;
+    projects: SectionCopy;
+    skills: SectionCopy;
+    education: SectionCopy;
+    contact: SectionCopy;
+  };
+  experiences: Experience[];
+  projects: Project[];
+  skillGroups: SkillGroup[];
+  education: Education[];
+};

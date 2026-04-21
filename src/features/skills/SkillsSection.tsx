@@ -1,13 +1,18 @@
 import { SectionHeading } from "../../components/ui/SectionHeading";
-import { skillGroups } from "../../data/skills";
+import type { SectionCopy, SkillGroup } from "../../types/portfolio";
 
-export function SkillsSection() {
+type SkillsSectionProps = {
+  copy: SectionCopy;
+  skillGroups: SkillGroup[];
+};
+
+export function SkillsSection({ copy, skillGroups }: SkillsSectionProps) {
   return (
     <section className="page-section" id="skills">
       <SectionHeading
-        eyebrow="Tech stack"
-        title="Tecnologias que uso para construir e integrar sistemas"
-        description="Uma visão organizada das linguagens, frameworks, bancos, ferramentas e práticas citadas no meu perfil profissional."
+        eyebrow={copy.eyebrow}
+        title={copy.title}
+        description={copy.description}
       />
 
       <div className="skills-grid">

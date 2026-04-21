@@ -1,14 +1,19 @@
 import { SectionHeading } from "../../components/ui/SectionHeading";
-import { projects } from "../../data/projects";
+import type { Project, SectionCopy } from "../../types/portfolio";
 import { ProjectCard } from "./components/ProjectCard";
 
-export function ProjectsSection() {
+type ProjectsSectionProps = {
+  copy: SectionCopy;
+  projects: Project[];
+};
+
+export function ProjectsSection({ copy, projects }: ProjectsSectionProps) {
   return (
     <section className="page-section section-contrast" id="projects">
       <SectionHeading
-        eyebrow="Projetos"
-        title="Espaço preparado para cases reais"
-        description="A seção de projetos está pronta para receber estudos de caso, repositórios e entregas publicáveis sem criar informações fictícias."
+        eyebrow={copy.eyebrow}
+        title={copy.title}
+        description={copy.description}
       />
 
       <div className="project-grid">

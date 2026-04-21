@@ -1,13 +1,18 @@
 import { SectionHeading } from "../../components/ui/SectionHeading";
-import { education } from "../../data/education";
+import type { Education, SectionCopy } from "../../types/portfolio";
 
-export function EducationSection() {
+type EducationSectionProps = {
+  copy: SectionCopy;
+  education: Education[];
+};
+
+export function EducationSection({ copy, education }: EducationSectionProps) {
   return (
     <section className="page-section" id="education">
       <SectionHeading
-        eyebrow="Formação"
-        title="Base acadêmica e pesquisa"
-        description="Minha formação atual conecta engenharia de software com pesquisa aplicada em Inteligência Artificial."
+        eyebrow={copy.eyebrow}
+        title={copy.title}
+        description={copy.description}
       />
 
       <div className="timeline">
