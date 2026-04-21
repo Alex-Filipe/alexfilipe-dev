@@ -14,9 +14,13 @@ export function TimelineCard({
   return (
     <article className="timeline-item">
       <div>
-        {meta.map((item) => (
-          <p key={item}>{item}</p>
-        ))}
+        <div className="timeline-meta-list">
+          {meta.map((item) => (
+            <span className="timeline-meta-item" key={item}>
+              {item}
+            </span>
+          ))}
+        </div>
         <h3>{title}</h3>
       </div>
 

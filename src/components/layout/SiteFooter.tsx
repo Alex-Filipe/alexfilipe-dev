@@ -8,7 +8,7 @@ export function SiteFooter({ profile }: SiteFooterProps) {
   return (
     <footer className="site-footer">
       <p>{profile.name}</p>
-      <p>{profile.location}</p>
+      <p>Brasil</p>
     </footer>
   );
 }

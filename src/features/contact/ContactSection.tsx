@@ -17,7 +17,7 @@ export function ContactSection({ copy, socialLinks }: ContactSectionProps) {
 
       <div className="contact-links">
         {socialLinks.map((link) => (
-          <a key={link.label} href={link.href}>
+          <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
             {link.label}
           </a>
         ))}

@@ -19,7 +19,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       {project.links?.length ? (
         <div className="project-links">
           {project.links.map((link) => (
-            <a key={link.label} href={link.href}>
+            <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
               {link.label}
             </a>
           ))}

@@ -20,15 +20,15 @@ export const portfolioContent: Record<string, PortfolioContent> = {
     language: "pt-BR",
     navigation: [
       { label: "Sobre", href: "#about" },
+      { label: "Skills", href: "#skills" },
       { label: "Experiência", href: "#experience" },
       { label: "Projetos", href: "#projects" },
-      { label: "Skills", href: "#skills" },
       { label: "Formação", href: "#education" },
       { label: "Contato", href: "#contact" },
     ],
     profile: {
       name: "Alex Filipe",
-      role: "Software Engineer (.NET / C#)",
+      role: "Software Engineer",
       location: "Belo Horizonte, Minas Gerais, Brasil",
       headline:
         "Desenvolvo APIs, integrações e sistemas empresariais com foco em qualidade, manutenção e performance.",
@@ -131,16 +131,16 @@ export const portfolioContent: Record<string, PortfolioContent> = {
         items: ["C#", ".NET", ".NET Framework", "REST APIs", "PHP", "Laravel"],
       },
       {
+        title: "Front-end",
+        items: ["React", "Vue.js", "JavaScript", "TypeScript", "HTML", "CSS"],
+      },
+      {
         title: "Bancos de dados",
         items: ["PostgreSQL", "SQL Server", "Modelagem de dados", "SQL"],
       },
       {
         title: "Integrações",
         items: ["System integrations", "Service Bus", "ERP Senior", "HubSpot", "Digibee"],
-      },
-      {
-        title: "Front-end",
-        items: ["React", "Vue.js", "JavaScript", "TypeScript", "HTML", "CSS"],
       },
       {
         title: "Engenharia",
@@ -154,7 +154,7 @@ export const portfolioContent: Record<string, PortfolioContent> = {
     education: [
       {
         title: "Mestrado em Ciência da Computação",
-        institution: "PPGCC",
+        institution: "Programa de Pós-Graduação em Ciência da Computação (PPGCC)",
         status: "Em andamento",
         description:
           "Pesquisa com foco em Inteligência Artificial, explorando como técnicas de IA podem ser aplicadas na construção de sistemas inteligentes e soluções tecnológicas inovadoras.",
@@ -182,15 +182,15 @@ export const portfolioContent: Record<string, PortfolioContent> = {
     language: "en-US",
     navigation: [
       { label: "About", href: "#about" },
+      { label: "Skills", href: "#skills" },
       { label: "Experience", href: "#experience" },
       { label: "Projects", href: "#projects" },
-      { label: "Skills", href: "#skills" },
       { label: "Education", href: "#education" },
       { label: "Contact", href: "#contact" },
     ],
     profile: {
       name: "Alex Filipe",
-      role: "Software Engineer (.NET / C#)",
+      role: "Software Engineer",
       location: "Belo Horizonte, Minas Gerais, Brazil",
       headline:
         "I build APIs, integrations, and enterprise systems with a focus on quality, maintainability, and performance.",
@@ -293,16 +293,16 @@ export const portfolioContent: Record<string, PortfolioContent> = {
         items: ["C#", ".NET", ".NET Framework", "REST APIs", "PHP", "Laravel"],
       },
       {
+        title: "Front-end",
+        items: ["React", "Vue.js", "JavaScript", "TypeScript", "HTML", "CSS"],
+      },
+      {
         title: "Databases",
         items: ["PostgreSQL", "SQL Server", "Data modeling", "SQL"],
       },
       {
         title: "Integrations",
         items: ["System integrations", "Service Bus", "Senior ERP", "HubSpot", "Digibee"],
-      },
-      {
-        title: "Front-end",
-        items: ["React", "Vue.js", "JavaScript", "TypeScript", "HTML", "CSS"],
       },
       {
         title: "Engineering",
@@ -316,7 +316,7 @@ export const portfolioContent: Record<string, PortfolioContent> = {
     education: [
       {
         title: "Master's Degree in Computer Science",
-        institution: "PPGCC",
+        institution: "Graduate Program in Computer Science (PPGCC)",
         status: "In progress",
         description:
           "Research focused on Artificial Intelligence, exploring how AI techniques can be applied to build intelligent systems and innovative technology solutions.",

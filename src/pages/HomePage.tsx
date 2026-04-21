@@ -39,12 +39,12 @@ export function HomePage({
           profile={content.profile}
           socialLinks={content.socialLinks}
         />
+        <SkillsSection copy={content.sections.skills} skillGroups={content.skillGroups} />
         <ExperienceSection
           copy={content.sections.experience}
           experiences={content.experiences}
         />
         <ProjectsSection copy={content.sections.projects} projects={content.projects} />
-        <SkillsSection copy={content.sections.skills} skillGroups={content.skillGroups} />
         <EducationSection copy={content.sections.education} education={content.education} />
         <ContactSection
           copy={content.sections.contact}

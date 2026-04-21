@@ -15,14 +15,13 @@ export function AboutSection({
     <section className="hero-section" id="about">
       <div className="hero-content">
         <p className="eyebrow">{profile.role}</p>
-        <h1>{profile.name}</h1>
         <p className="hero-headline">{profile.headline}</p>
         <p className="hero-summary">{profile.summary}</p>
         <p className="hero-summary">{profile.shortIntro}</p>
 
         <div className="hero-actions" aria-label="Links de contato">
           {socialLinks.map((link) => (
-            <a key={link.label} href={link.href}>
+            <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
               {link.label}
             </a>
           ))}
