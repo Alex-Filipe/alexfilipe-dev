@@ -30,7 +30,9 @@
   --violet: #8257e5;
   --violet-soft: rgba(130, 87, 229, 0.22);
   --violet-border: rgba(130, 87, 229, 0.44);
+  --focus-ring: rgba(4, 211, 97, 0.36);
   --shadow: rgba(0, 0, 0, 0.34);
+  --shadow-soft: rgba(0, 0, 0, 0.18);
   --content-max-width: 1180px;
 }
 
@@ -57,5 +59,7 @@
   --violet: #6d40d8;
   --violet-soft: rgba(109, 64, 216, 0.12);
   --violet-border: rgba(109, 64, 216, 0.34);
+  --focus-ring: rgba(0, 135, 95, 0.28);
   --shadow: rgba(15, 23, 42, 0.14);
+  --shadow-soft: rgba(15, 23, 42, 0.08);
 }

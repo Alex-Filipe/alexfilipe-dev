@@ -18,6 +18,22 @@ a {
   text-decoration: none;
 }
 
+a,
+button {
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+a:focus-visible,
+button:focus-visible {
+  box-shadow: 0 0 0 4px var(--focus-ring);
+  outline: 0;
+}
+
 h1,
 h2,
 h3,
@@ -42,4 +58,12 @@ h2 {
 h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+li + li {
+  margin-top: 0.35rem;
 }

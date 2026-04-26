@@ -9,7 +9,7 @@ type ProjectsSectionProps = {
 
 export function ProjectsSection({ copy, projects }: ProjectsSectionProps) {
   return (
-    <section className="page-section section-contrast" id="projects">
+    <section className="page-section" id="projects">
       <SectionHeading
         eyebrow={copy.eyebrow}
         title={copy.title}
