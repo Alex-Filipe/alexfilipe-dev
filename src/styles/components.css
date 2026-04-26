@@ -115,6 +115,11 @@
   font-size: 1rem;
 }
 
+.section-heading span {
+  display: block;
+  line-height: 1.7;
+}
+
 .hero-actions,
 .contact-links,
 .project-links,
@@ -155,11 +160,14 @@
     transform 160ms ease;
 }
 
-.timeline-item:hover,
-.project-card:hover,
-.skill-card:hover {
-  border-color: var(--violet);
-  transform: translateY(-2px);
+@media (hover: hover) {
+  .timeline-item:hover,
+  .project-card:hover,
+  .skill-card:hover {
+    border-color: var(--violet);
+    box-shadow: 0 20px 56px var(--shadow-soft);
+    transform: translateY(-2px);
+  }
 }
 
 .timeline-item {
@@ -334,4 +342,5 @@
   margin: 0;
   overflow-x: auto;
   padding: 1rem;
+  -webkit-overflow-scrolling: touch;
 }

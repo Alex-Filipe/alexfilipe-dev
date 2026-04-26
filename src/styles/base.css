@@ -28,6 +28,15 @@ button {
     transform 160ms ease;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 a:focus-visible,
 button:focus-visible {
   box-shadow: 0 0 0 4px var(--focus-ring);

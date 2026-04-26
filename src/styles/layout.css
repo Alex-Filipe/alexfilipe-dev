@@ -16,6 +16,7 @@
 .site-footer {
   align-items: center;
   display: flex;
+  gap: 1rem;
   justify-content: space-between;
   margin: 0 auto;
   max-width: var(--content-max-width);
@@ -45,9 +46,11 @@
 .header-actions {
   align-items: center;
   display: flex;
+  flex: 1 1 auto;
   gap: 1rem;
   justify-content: flex-end;
   flex-wrap: wrap;
+  min-width: 0;
 }
 
 .site-nav {
@@ -55,6 +58,7 @@
   flex-wrap: wrap;
   gap: 0.55rem;
   justify-content: flex-end;
+  min-width: 0;
 }
 
 .hero-section,
