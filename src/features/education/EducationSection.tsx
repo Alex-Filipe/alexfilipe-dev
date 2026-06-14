@@ -16,7 +16,7 @@ export function EducationSection({ copy, education }: EducationSectionProps) {
         description={copy.description}
       />
 
-      <div className="timeline">
+      <div className="timeline" data-reveal>
         {education.map((item) => (
           <TimelineCard
             description={item.description}

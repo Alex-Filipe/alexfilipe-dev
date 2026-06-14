@@ -6,6 +6,8 @@ import { EducationSection } from "../features/education/EducationSection";
 import { ExperienceSection } from "../features/experience/ExperienceSection";
 import { ProjectsSection } from "../features/projects/ProjectsSection";
 import { SkillsSection } from "../features/skills/SkillsSection";
+import { useActiveSection } from "../hooks/useActiveSection";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 import type { Language, PortfolioContent, Theme } from "../types/portfolio";
 
 type HomePageProps = {
@@ -16,6 +18,11 @@ type HomePageProps = {
   theme: Theme;
 };
 
+const skipLinkLabel: Record<Language, string> = {
+  "pt-BR": "Pular para o conteúdo",
+  "en-US": "Skip to content",
+};
+
 export function HomePage({
   content,
   language,
@@ -23,9 +30,17 @@ export function HomePage({
   onThemeChange,
   theme,
 }: HomePageProps) {
+  const sectionIds = content.navigation.map((item) => item.href.replace("#", ""));
+  const activeId = useActiveSection(sectionIds);
+  useScrollReveal();
+
   return (
     <div className="app-shell" data-theme={theme}>
+      <a className="skip-link" href="#main">
+        {skipLinkLabel[language]}
+      </a>
       <SiteHeader
+        activeHref={activeId ? `#${activeId}` : ""}
         language={language}
         navigationItems={content.navigation}
         onLanguageChange={onLanguageChange}
@@ -33,9 +48,9 @@ export function HomePage({
         profile={content.profile}
         theme={theme}
       />
-      <main>
+      <main id="main">
         <AboutSection
-          heroMetrics={content.heroMetrics}
+          language={language}
           profile={content.profile}
           socialLinks={content.socialLinks}
         />
@@ -51,7 +66,11 @@ export function HomePage({
           socialLinks={content.socialLinks}
         />
       </main>
-      <SiteFooter profile={content.profile} />
+      <SiteFooter
+        language={language}
+        profile={content.profile}
+        socialLinks={content.socialLinks}
+      />
     </div>
   );
 }

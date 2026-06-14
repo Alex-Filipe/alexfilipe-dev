@@ -15,7 +15,7 @@ export function SkillsSection({ copy, skillGroups }: SkillsSectionProps) {
         description={copy.description}
       />
 
-      <div className="skills-grid">
+      <div className="skills-grid" data-reveal>
         {skillGroups.map((group) => (
           <article className="skill-card" key={group.title}>
             <h3>{group.title}</h3>
