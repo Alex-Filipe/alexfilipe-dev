@@ -10,7 +10,7 @@ export function SectionHeading({
   description,
 }: SectionHeadingProps) {
   return (
-    <div className="section-heading">
+    <div className="section-heading" data-reveal>
       <p>{eyebrow}</p>
       <h2>{title}</h2>
       {description ? <span>{description}</span> : null}

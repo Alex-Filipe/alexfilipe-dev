@@ -24,6 +24,7 @@ pnpm-debug.log*
 .idea/
 .vscode/
 .codex/
+.claude/
 
 # Package manager caches
 .npm/

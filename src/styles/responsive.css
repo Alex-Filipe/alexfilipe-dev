@@ -108,6 +108,7 @@
   .terminal-body pre {
     font-size: 0.75rem;
     line-height: 1.55;
+    min-height: 8.6rem;
     padding: 0.85rem;
   }
 
