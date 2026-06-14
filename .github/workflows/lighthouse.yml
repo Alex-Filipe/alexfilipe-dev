@@ -1,0 +1,35 @@
+name: Lighthouse
+
+# Informative only: audits the built site on every PR and reports the
+# Performance / Accessibility / Best Practices / SEO scores. Does not block merges.
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    name: Lighthouse audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (root base path so dist is served from /)
+        run: npm run build
+        env:
+          BASE_PATH: "/"
+
+      - name: Run Lighthouse CI
+        run: npx --yes @lhci/cli@0.14.x autorun
