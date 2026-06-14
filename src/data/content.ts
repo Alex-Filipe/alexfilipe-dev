@@ -66,7 +66,7 @@ export const portfolioContent: Record<string, PortfolioContent> = {
         eyebrow: "Formação",
         title: "Base acadêmica e pesquisa",
         description:
-          "Minha formação atual conecta engenharia de software com pesquisa aplicada em Inteligência Artificial.",
+          "Minha formação conecta engenharia de software com pesquisa em IA eficiente e destilação de conhecimento.",
       },
       contact: {
         eyebrow: "Contato",
@@ -148,7 +148,7 @@ export const portfolioContent: Record<string, PortfolioContent> = {
       },
       {
         title: "Pesquisa",
-        items: ["Inteligência Artificial", "Sistemas inteligentes", "Python"],
+        items: ["Destilação de conhecimento", "Visão computacional", "Deep Learning", "Python"],
       },
     ],
     education: [
@@ -157,11 +157,11 @@ export const portfolioContent: Record<string, PortfolioContent> = {
         institution: "Programa de Pós-Graduação em Ciência da Computação (PPGCC)",
         status: "Em andamento",
         description:
-          "Pesquisa com foco em Inteligência Artificial, explorando como técnicas de IA podem ser aplicadas na construção de sistemas inteligentes e soluções tecnológicas inovadoras.",
+          "Pesquisa em destilação de conhecimento para criar modelos de IA mais eficientes, aplicada à detecção de violência em vídeos de vigilância.",
         highlights: [
-          "Pesquisa em Inteligência Artificial aplicada.",
-          "Estudo de sistemas inteligentes e soluções tecnológicas.",
-          "Conexão entre engenharia de software e investigação acadêmica.",
+          "Destilação de conhecimento (modelo professor → estudante).",
+          "Detecção de violência em vídeos de vigilância.",
+          "Modelos eficientes com menor custo computacional.",
         ],
       },
       {
@@ -228,7 +228,7 @@ export const portfolioContent: Record<string, PortfolioContent> = {
         eyebrow: "Education",
         title: "Academic background and research",
         description:
-          "My current academic path connects software engineering with applied research in Artificial Intelligence.",
+          "My background connects software engineering with research in efficient AI and knowledge distillation.",
       },
       contact: {
         eyebrow: "Contact",
@@ -310,7 +310,7 @@ export const portfolioContent: Record<string, PortfolioContent> = {
       },
       {
         title: "Research",
-        items: ["Artificial Intelligence", "Intelligent systems", "Python"],
+        items: ["Knowledge distillation", "Computer vision", "Deep Learning", "Python"],
       },
     ],
     education: [
@@ -319,11 +319,11 @@ export const portfolioContent: Record<string, PortfolioContent> = {
         institution: "Graduate Program in Computer Science (PPGCC)",
         status: "In progress",
         description:
-          "Research focused on Artificial Intelligence, exploring how AI techniques can be applied to build intelligent systems and innovative technology solutions.",
+          "Research on knowledge distillation to build more efficient AI models, applied to violence detection in surveillance videos.",
         highlights: [
-          "Research in applied Artificial Intelligence.",
-          "Study of intelligent systems and technology solutions.",
-          "Connection between software engineering and academic research.",
+          "Knowledge distillation (teacher → student models).",
+          "Violence detection in surveillance video.",
+          "Efficient models with lower computational cost.",
         ],
       },
       {

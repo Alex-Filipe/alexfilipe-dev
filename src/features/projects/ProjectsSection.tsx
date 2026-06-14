@@ -16,7 +16,7 @@ export function ProjectsSection({ copy, projects }: ProjectsSectionProps) {
         description={copy.description}
       />
 
-      <div className="project-grid">
+      <div className="project-grid" data-reveal>
         {projects.map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}
