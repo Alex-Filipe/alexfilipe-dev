@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 type Phase = "typing" | "deleting";
 
@@ -26,26 +26,22 @@ export function useTypewriter(
   snippets: string[],
   { typeSpeed = 30, deleteSpeed = 14, pauseTime = 2400 }: TypewriterOptions = {}
 ): TypewriterState {
-  const reduced = useRef(false);
+  const [isReduced] = useState(
+    () =>
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  );
   const [index, setIndex] = useState(0);
   const [sub, setSub] = useState(0);
   const [phase, setPhase] = useState<Phase>("typing");
 
   useEffect(() => {
-    reduced.current = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduced.current) {
-      setSub(snippets[0]?.length ?? 0);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    if (reduced.current || snippets.length === 0) {
+    if (isReduced || snippets.length === 0) {
       return;
     }
 
     const current = snippets[index] ?? "";
-    let delay = typeSpeed;
+    let delay: number;
     let next: () => void;
 
     if (phase === "typing") {
@@ -71,10 +67,12 @@ export function useTypewriter(
 
     const timer = window.setTimeout(next, delay);
     return () => window.clearTimeout(timer);
-  }, [sub, phase, index, snippets, typeSpeed, deleteSpeed, pauseTime]);
+  }, [sub, phase, index, snippets, typeSpeed, deleteSpeed, pauseTime, isReduced]);
 
   const safeIndex = index % Math.max(snippets.length, 1);
-  const text = (snippets[safeIndex] ?? "").slice(0, sub);
+  const current = snippets[safeIndex] ?? "";
+  // In reduced-motion mode the snippet is shown in full, with no animation.
+  const text = isReduced ? current : current.slice(0, sub);
 
-  return { text, index: safeIndex, isReduced: reduced.current };
+  return { text, index: safeIndex, isReduced };
 }
