@@ -52,9 +52,9 @@ export const portfolioContent: Record<string, PortfolioContent> = {
       },
       projects: {
         eyebrow: "Projetos",
-        title: "Espaço preparado para cases reais",
+        title: "Entregas técnicas e cases reais",
         description:
-          "A seção de projetos está pronta para receber estudos de caso, repositórios e entregas publicáveis sem criar informações fictícias.",
+          "Projetos e entregas reais — a começar pelo pipeline de CI/CD que publica este site. Novos cases entram conforme forem organizados.",
       },
       skills: {
         eyebrow: "Tech stack",
@@ -119,10 +119,20 @@ export const portfolioContent: Record<string, PortfolioContent> = {
     ],
     projects: [
       {
-        title: "Projetos profissionais em organização",
+        title: "CI/CD do portfólio",
         description:
-          "Meu LinkedIn ainda não lista projetos públicos específicos. Esta área está preparada para receber estudos de caso, repositórios e entregas selecionadas conforme forem organizados para publicação.",
-        stack: ["C#", ".NET", "React", "APIs", "Integrações"],
+          "Pipeline que testa (lint + build) e publica este site automaticamente a cada push na branch principal, usando GitHub Actions e GitHub Pages.",
+        stack: ["GitHub Actions", "CI/CD", "Vite", "GitHub Pages"],
+        links: [
+          {
+            label: "Ver pipeline",
+            href: "https://github.com/Alex-Filipe/alexfilipe-dev/blob/main/.github/workflows/deploy.yml",
+          },
+          {
+            label: "Actions",
+            href: "https://github.com/Alex-Filipe/alexfilipe-dev/actions",
+          },
+        ],
       },
     ],
     skillGroups: [
@@ -214,9 +224,9 @@ export const portfolioContent: Record<string, PortfolioContent> = {
       },
       projects: {
         eyebrow: "Projects",
-        title: "A space prepared for real case studies",
+        title: "Real technical work and case studies",
         description:
-          "My LinkedIn profile does not list public projects yet, so this section is ready for future case studies, repositories, and selected work without adding fictional information.",
+          "Real projects and deliverables — starting with the CI/CD pipeline that ships this site. More case studies as they get organized.",
       },
       skills: {
         eyebrow: "Tech stack",
@@ -281,10 +291,20 @@ export const portfolioContent: Record<string, PortfolioContent> = {
     ],
     projects: [
       {
-        title: "Professional projects in progress",
+        title: "Portfolio CI/CD",
         description:
-          "My LinkedIn profile does not list specific public projects yet. This area is prepared for case studies, repositories, and selected work as they become ready for publication.",
-        stack: ["C#", ".NET", "React", "APIs", "Integrations"],
+          "Pipeline that tests (lint + build) and publishes this site automatically on every push to the main branch, using GitHub Actions and GitHub Pages.",
+        stack: ["GitHub Actions", "CI/CD", "Vite", "GitHub Pages"],
+        links: [
+          {
+            label: "View pipeline",
+            href: "https://github.com/Alex-Filipe/alexfilipe-dev/blob/main/.github/workflows/deploy.yml",
+          },
+          {
+            label: "Actions",
+            href: "https://github.com/Alex-Filipe/alexfilipe-dev/actions",
+          },
+        ],
       },
     ],
     skillGroups: [
