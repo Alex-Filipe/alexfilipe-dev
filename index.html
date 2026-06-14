@@ -3,11 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Alex Filipe | Software Engineer</title>
     <meta
       name="description"
-      content="Portfolio e curriculo de Alex Filipe, desenvolvedor front-end."
+      content="Portfólio de Alex Filipe — engenheiro de software focado em backend, APIs, integrações e sistemas empresariais com C#/.NET."
     />
-    <title>Alex Filipe | Front-end Developer</title>
+    <meta name="author" content="Alex Filipe" />
+    <meta
+      name="keywords"
+      content="Alex Filipe, Software Engineer, Backend, C#, .NET, APIs, Integrações, PostgreSQL, React"
+    />
+    <link rel="canonical" href="https://alex-filipe.github.io/alexfilipe-dev/" />
+
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Theme color (adapts to system scheme) -->
+    <meta name="theme-color" content="#06080f" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f6f8fb" media="(prefers-color-scheme: light)" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Alex Filipe | Software Engineer" />
+    <meta
+      property="og:description"
+      content="Engenheiro de software focado em backend, APIs, integrações e sistemas empresariais com C#/.NET."
+    />
+    <meta property="og:url" content="https://alex-filipe.github.io/alexfilipe-dev/" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:image" content="https://alex-filipe.github.io/alexfilipe-dev/favicon.svg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Alex Filipe | Software Engineer" />
+    <meta
+      name="twitter:description"
+      content="Engenheiro de software focado em backend, APIs, integrações e sistemas empresariais com C#/.NET."
+    />
+    <meta name="twitter:image" content="https://alex-filipe.github.io/alexfilipe-dev/favicon.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Apply persisted theme/language before paint to avoid a flash -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia &&
+                  window.matchMedia("(prefers-color-scheme: light)").matches
+                ? "light"
+                : "dark";
+          var root = document.documentElement;
+          root.dataset.theme = theme;
+          root.style.background = theme === "light" ? "#f6f8fb" : "#06080f";
+          var lang = localStorage.getItem("language");
+          if (lang === "en-US" || lang === "pt-BR") root.lang = lang;
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

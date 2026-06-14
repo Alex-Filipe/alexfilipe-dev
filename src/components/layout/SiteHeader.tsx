@@ -1,6 +1,7 @@
 import type { Language, NavigationItem, Profile, Theme } from "../../types/portfolio";
 
 type SiteHeaderProps = {
+  activeHref: string;
   language: Language;
   navigationItems: NavigationItem[];
   onLanguageChange: (language: Language) => void;
@@ -20,6 +21,7 @@ const themeOptions: Array<{ icon: string; label: string; theme: Theme }> = [
 ];
 
 export function SiteHeader({
+  activeHref,
   language,
   navigationItems,
   onLanguageChange,
@@ -35,11 +37,19 @@ export function SiteHeader({
 
       <div className="header-actions">
         <nav className="site-nav" aria-label="Navegação principal">
-          {navigationItems.map((item) => (
-            <a key={item.href} href={item.href}>
-              {item.label}
-            </a>
-          ))}
+          {navigationItems.map((item) => {
+            const isActive = item.href === activeHref;
+            return (
+              <a
+                key={item.href}
+                href={item.href}
+                aria-current={isActive ? "true" : undefined}
+                className={isActive ? "is-active" : ""}
+              >
+                {item.label}
+              </a>
+            );
+          })}
         </nav>
 
         <div className="language-switcher" aria-label="Selecionar idioma">

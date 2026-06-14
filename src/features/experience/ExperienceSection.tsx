@@ -16,7 +16,7 @@ export function ExperienceSection({ copy, experiences }: ExperienceSectionProps)
         description={copy.description}
       />
 
-      <div className="timeline">
+      <div className="timeline" data-reveal>
         {experiences.map((experience) => (
           <TimelineCard
             description={experience.description}

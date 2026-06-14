@@ -10,7 +10,25 @@ body {
   margin: 0;
   min-width: 320px;
   overflow-x: hidden;
-  background: #06080f;
+  background: var(--bg-base);
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 50;
+  background: var(--accent);
+  color: #04130a;
+  border-radius: 8px;
+  font-weight: 700;
+  padding: 0.65rem 1rem;
+  transform: translateY(-160%);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 0;
 }
 
 a {
@@ -32,6 +50,8 @@ button {
   *,
   *::before,
   *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
