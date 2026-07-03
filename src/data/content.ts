@@ -134,6 +134,18 @@ export const portfolioContent: Record<string, PortfolioContent> = {
           },
         ],
       },
+      {
+        title: "grep-find-tool",
+        description:
+          "Ferramenta CLI de busca em arquivos (grep + find) escrita em Go. Pipeline streaming com worker pool, suporte a regex/literal, case-insensitive, com backpressure e memória constante.",
+        stack: ["Go", "CLI", "Regex", "Streaming"],
+        links: [
+          {
+            label: "Repositório",
+            href: "https://github.com/Alex-Filipe/grep-find-tool",
+          },
+        ],
+      },
     ],
     skillGroups: [
       {
@@ -303,6 +315,18 @@ export const portfolioContent: Record<string, PortfolioContent> = {
           {
             label: "Actions",
             href: "https://github.com/Alex-Filipe/alexfilipe-dev/actions",
+          },
+        ],
+      },
+      {
+        title: "grep-find-tool",
+        description:
+          "CLI file search tool (grep + find) written in Go. Streaming pipeline with worker pool, regex/literal support, case-insensitive, with backpressure and constant memory usage.",
+        stack: ["Go", "CLI", "Regex", "Streaming"],
+        links: [
+          {
+            label: "Repository",
+            href: "https://github.com/Alex-Filipe/grep-find-tool",
           },
         ],
       },
