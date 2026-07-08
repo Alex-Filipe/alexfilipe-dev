@@ -56,16 +56,10 @@ export type Profile = {
   shortIntro: string;
 };
 
-export type HeroMetric = {
-  label: string;
-  value: string;
-};
-
 export type PortfolioContent = {
   language: Language;
   navigation: NavigationItem[];
   profile: Profile;
-  heroMetrics: HeroMetric[];
   socialLinks: SocialLink[];
   sections: {
     experience: SectionCopy;
