@@ -11,6 +11,17 @@ const documentTitle: Record<Language, string> = {
   "en-US": "Alex Filipe | Software Engineer",
 };
 
+const documentDescription: Record<Language, string> = {
+  "pt-BR":
+    "Portfólio de Alex Filipe — engenheiro de software focado em backend, APIs, integrações e sistemas empresariais com C#/.NET.",
+  "en-US":
+    "Portfolio of Alex Filipe — software engineer focused on backend, APIs, integrations, and enterprise systems with C#/.NET.",
+};
+
+function setMetaContent(selector: string, content: string) {
+  document.querySelector(selector)?.setAttribute("content", content);
+}
+
 function getInitialTheme(): Theme {
   if (typeof window === "undefined") {
     return "dark";
@@ -53,6 +64,15 @@ export function App() {
   useEffect(() => {
     document.documentElement.lang = language;
     document.title = documentTitle[language];
+
+    const description = documentDescription[language];
+    setMetaContent('meta[name="description"]', description);
+    setMetaContent('meta[property="og:title"]', documentTitle[language]);
+    setMetaContent('meta[property="og:description"]', description);
+    setMetaContent('meta[property="og:locale"]', language === "pt-BR" ? "pt_BR" : "en_US");
+    setMetaContent('meta[name="twitter:title"]', documentTitle[language]);
+    setMetaContent('meta[name="twitter:description"]', description);
+
     window.localStorage.setItem(LANGUAGE_KEY, language);
   }, [language]);
 

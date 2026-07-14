@@ -59,7 +59,11 @@ export function HomePage({
           copy={content.sections.experience}
           experiences={content.experiences}
         />
-        <ProjectsSection copy={content.sections.projects} projects={content.projects} />
+        <ProjectsSection
+          copy={content.sections.projects}
+          language={language}
+          projects={content.projects}
+        />
         <EducationSection copy={content.sections.education} education={content.education} />
         <ContactSection
           copy={content.sections.contact}

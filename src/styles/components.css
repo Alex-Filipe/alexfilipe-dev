@@ -460,7 +460,6 @@
   transition:
     opacity 600ms ease,
     transform 600ms ease;
-  will-change: opacity, transform;
 }
 
 .reveal-enabled [data-reveal].is-visible {
