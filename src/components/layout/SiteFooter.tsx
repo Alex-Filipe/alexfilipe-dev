@@ -1,4 +1,6 @@
+import { uiLabels } from "../../i18n/labels";
 import type { Language, Profile, SocialLink } from "../../types/portfolio";
+import { externalLinkProps } from "../../utils/links";
 
 type SiteFooterProps = {
   language: Language;
@@ -31,9 +33,9 @@ export function SiteFooter({ language, profile, socialLinks }: SiteFooterProps) 
           </p>
         </div>
 
-        <nav className="footer-links" aria-label={language === "pt-BR" ? "Redes" : "Links"}>
+        <nav className="footer-links" aria-label={uiLabels[language].footerLinks}>
           {socialLinks.map((link) => (
-            <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
+            <a key={link.label} href={link.href} {...externalLinkProps(link.href)}>
               {link.label}
             </a>
           ))}

@@ -1,3 +1,4 @@
+import { uiLabels } from "../../i18n/labels";
 import type { Language, NavigationItem, Profile, Theme } from "../../types/portfolio";
 
 type SiteHeaderProps = {
@@ -15,9 +16,9 @@ const languageOptions: Array<{ label: string; language: Language; flag: string }
   { label: "English", language: "en-US", flag: "🇺🇸" },
 ];
 
-const themeOptions: Array<{ icon: string; label: string; theme: Theme }> = [
-  { icon: "☾", label: "Tema escuro", theme: "dark" },
-  { icon: "☼", label: "Tema claro", theme: "light" },
+const themeOptions: Array<{ icon: string; theme: Theme }> = [
+  { icon: "☾", theme: "dark" },
+  { icon: "☼", theme: "light" },
 ];
 
 export function SiteHeader({
@@ -29,14 +30,16 @@ export function SiteHeader({
   profile,
   theme,
 }: SiteHeaderProps) {
+  const labels = uiLabels[language];
+
   return (
     <header className="site-header">
-      <a className="brand" href="#about" aria-label="Ir para o início">
+      <a className="brand" href="#about" aria-label={labels.home}>
         {profile.name}
       </a>
 
       <div className="header-actions">
-        <nav className="site-nav" aria-label="Navegação principal">
+        <nav className="site-nav" aria-label={labels.primaryNav}>
           {navigationItems.map((item) => {
             const isActive = item.href === activeHref;
             return (
@@ -52,7 +55,7 @@ export function SiteHeader({
           })}
         </nav>
 
-        <div className="language-switcher" aria-label="Selecionar idioma">
+        <div className="language-switcher" aria-label={labels.languageSwitcher}>
           {languageOptions.map((option) => (
             <button
               aria-label={option.label}
@@ -67,10 +70,10 @@ export function SiteHeader({
           ))}
         </div>
 
-        <div className="theme-switcher" aria-label="Selecionar tema">
+        <div className="theme-switcher" aria-label={labels.themeSwitcher}>
           {themeOptions.map((option) => (
             <button
-              aria-label={option.label}
+              aria-label={option.theme === "dark" ? labels.themeDark : labels.themeLight}
               aria-pressed={theme === option.theme}
               className={theme === option.theme ? "is-active" : ""}
               key={option.theme}

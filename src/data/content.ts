@@ -37,11 +37,6 @@ export const portfolioContent: Record<string, PortfolioContent> = {
       shortIntro:
         "Atuo na evolução de sistemas corporativos, conectando serviços, dados e processos com uma base técnica sólida em .NET, arquitetura de software e integrações.",
     },
-    heroMetrics: [
-      { label: "Foco", value: "Backend" },
-      { label: "Stack", value: ".NET / C#" },
-      { label: "Pesquisa", value: "IA" },
-    ],
     socialLinks,
     sections: {
       experience: {
@@ -146,6 +141,18 @@ export const portfolioContent: Record<string, PortfolioContent> = {
           },
         ],
       },
+      {
+        title: "video-transcriber-mcp",
+        description:
+          "Servidor MCP em Python que transcreve arquivos de vídeo e áudio ou vídeos públicos por URL, com timestamps. Suporta execução local com Faster Whisper e backends opcionais OpenAI e Groq.",
+        stack: ["Python", "MCP", "Faster Whisper", "ffmpeg"],
+        links: [
+          {
+            label: "Repositório",
+            href: "https://github.com/Alex-Filipe/video-transcriber-mcp",
+          },
+        ],
+      },
     ],
     skillGroups: [
       {
@@ -221,11 +228,6 @@ export const portfolioContent: Record<string, PortfolioContent> = {
       shortIntro:
         "My work connects services, data, and business processes through a solid foundation in .NET, software architecture, and system integrations.",
     },
-    heroMetrics: [
-      { label: "Focus", value: "Backend" },
-      { label: "Stack", value: ".NET / C#" },
-      { label: "Research", value: "AI" },
-    ],
     socialLinks,
     sections: {
       experience: {
@@ -327,6 +329,18 @@ export const portfolioContent: Record<string, PortfolioContent> = {
           {
             label: "Repository",
             href: "https://github.com/Alex-Filipe/grep-find-tool",
+          },
+        ],
+      },
+      {
+        title: "video-transcriber-mcp",
+        description:
+          "Python MCP server that transcribes local video and audio files or public videos from URLs, with timestamps. Supports local Faster Whisper processing and optional OpenAI and Groq backends.",
+        stack: ["Python", "MCP", "Faster Whisper", "ffmpeg"],
+        links: [
+          {
+            label: "Repository",
+            href: "https://github.com/Alex-Filipe/video-transcriber-mcp",
           },
         ],
       },

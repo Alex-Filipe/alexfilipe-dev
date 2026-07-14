@@ -1,5 +1,6 @@
 import { SectionHeading } from "../../components/ui/SectionHeading";
 import type { SectionCopy, SocialLink } from "../../types/portfolio";
+import { externalLinkProps } from "../../utils/links";
 
 type ContactSectionProps = {
   copy: SectionCopy;
@@ -17,7 +18,7 @@ export function ContactSection({ copy, socialLinks }: ContactSectionProps) {
 
       <div className="contact-links" data-reveal>
         {socialLinks.map((link) => (
-          <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
+          <a key={link.label} href={link.href} {...externalLinkProps(link.href)}>
             {link.label}
           </a>
         ))}
